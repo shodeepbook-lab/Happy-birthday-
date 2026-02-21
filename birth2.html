@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu ulang tahun</title>
+    <link rel="stylesheet" href="c.css">
+</head>
+
+<body>
+    <audio id="apiMusic" loop>
+    <source src="hbh.mp3" type="audio/mpeg">
+</audio>
+
+    <img src="ZUiY.gif" alt="stars" class="star">
+    <img src="5l03.gif" alt="ballon" class="ballon">
+    <div class="container">
+        <div class="birthdayCard">
+            <div class="cardFront">
+                <div class="front-text">
+                    <h3 class="happy">HAPPY</h3>
+                    <h2 class="bday">BIRTHDAY</h2>
+                    <h3 class="toyou">Azla!</h3>
+                </div>
+                <div class="wrap-deco">
+                    <div class="decorations"></div>
+                    <div class="decorationsTwo"></div>
+                </div>
+                <div class="wrap-decoTwo">
+                    <div class="decorations"></div>
+                    <div class="decorationsThree"></div>
+                </div>
+                <div class="plate">
+                    <div class="cake"></div>
+                    <div class="flame"></div>
+                </div>
+            </div>
+            <div class="cardInside">
+    <input type="radio" name="pages" id="p1" checked>
+    <input type="radio" name="pages" id="p2">
+    <input type="radio" name="pages" id="p3">
+
+    <div class="page page1">
+        <div class="img"><img src="ceee.png" class="bdyboy"></div>
+        <div class="inside-text">
+            <h3 class="happy">HAPPY</h3>
+            <h2 class="bday">BIRTHDAY</h2>
+        </div>
+        <div class="wishes">
+            <p>Dear, Azla...</p>
+            <p>Selamat ulang tahun. Aku sering memperhatikan bahwa hal-hal paling indah di dunia ini, seperti matahari terbit atau bunga yang mekar, sering kali terjadi dalam keheningan, tanpa perlu banyak suara. Bagiku, keberadaanmu punya kesan yang serupa; tenang, namun memberikan warna yang jelas bagi siapa pun yang mengenalmu.</p>
+        </div>
+        <div class="nav-btns">
+            <label for="p2" class="btn-nav">Selanjutnya &rarr;</label>
+        </div>
+    </div>
+
+    <div class="page page2">
+        <div class="wishes">
+            <p>Di hari spesialmu ini, aku mendoakan semoga kamu panjang umur, sehat selalu, dan senantiasa diberikan rezeki yang berlimpah. Semoga Allah selalu melindungimu dalam setiap langkah, memberikan kedamaian di hati, dan menjagamu dalam ketenangan yang kamu cintai. Tetaplah melangkah dengan ritmemu sendiri yang tenang, karena bagiku, caramu menjalani hidup dengan apa adanya sudah sangat luar biasa. Aku ingin minta maaf jika sebelumnya aku memiliki banyak salah kepadamu, hal yang aku lakukan kepadamu serta yang membuat kamu kecewa maaf ya. karena hal ini yang membuat aku selalu terpikirkan kenapa aku seperti itu kenapa aku kayak gitu, sebelum terlambat aku ingin meminta maaf sebesar-besarnya kepada dirimu, sekali lagi aku minta maaf""</p>
+        </div>
+        <div class="nav-btns">
+            <label for="p1" class="btn-nav">&larr; Balik</label>
+            <label for="p3" class="btn-nav">Lanjut &rarr;</label>
+        </div>
+    </div>
+
+    <div class="page page3">
+        <div class="wishes">
+            <p>Aku telah lama merenung dalam kesunyianku, mencoba memahami garis batas antara rasa kagum dan keinginan untuk memiliki. Secara filosofis, aku percaya bahwa kebahagiaan sejati tidak datang dari mengendalikan perasaan orang lain, melainkan dari keberanian untuk jujur pada diri sendiri. Aku menyukaimu, aku ingin mengatakan itu saja untuk selebihnya aku ga berharap lebih, aku hanya ingin mengungkapkannya saja tanpa meminta untuk dibalas, masalah kamu menyukai aku atau tidak itu hak kamu. Terimakasih karena kamu aku hanya menyukai dirimu saja tanpa bisa beralih menyukai orang lain hatiku terkunci untukmu</p>
+            <p class="name">~ 22 Februari 2026</p>
+        </div>
+        <div class="nav-btns">
+            <label for="p2" class="btn-nav">&larr; Kembali</label>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <img src="4SHX.gif" alt="cat" class="cat">
+</body>
+<<script>// 1. Ambil elemen audio
+const audio = document.querySelector('audio');
+
+// 2. Fungsi untuk memutar musik
+const playMusic = () => {
+    audio.play().then(() => {
+        // Jika berhasil, hapus semua "penunggu" agar tidak berat
+        ["click", "touchstart", "scroll", "mousemove"].forEach(event => 
+            document.removeEventListener(event, playMusic)
+        );
+    }).catch(e => console.log("Menunggu interaksi..."));
+};
+
+// 3. Pasang "penunggu" di berbagai jenis interaksi
+["click", "touchstart", "scroll", "mousemove"].forEach(event => 
+    document.addEventListener(event, playMusic)
+);
+</script>
+</html>
